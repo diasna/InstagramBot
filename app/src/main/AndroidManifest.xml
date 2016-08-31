@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lightenartes.bot.ig" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyMaterialTheme"
+        android:name="com.orm.SugarApp">
+
+        <meta-data android:name="DATABASE" android:value="com.lightenartes.bot.ig" />
+        <meta-data android:name="VERSION" android:value="8" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.lightenartes.bot.ig" />
+
+        <activity
+            android:name="com.lightenartes.bot.ig.activity.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.lightenartes.bot.ig.activity.MainActivity"/>
+        <activity android:name=".instagram.InstagramWebView"/>
+        <activity android:name=".activity.BotPreferenceActivity"/>
+
+        <service android:name=".service.FollowBotServiceSync"/>
+
+        <receiver android:name=".service.FollowBotReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.lightenartes.bot.FollowBot" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

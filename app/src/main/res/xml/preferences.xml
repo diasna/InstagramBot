@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Interval">
+        <EditTextPreference
+            android:dialogTitle="Set Random Interval Min (in seconds)"
+            android:key="random_interval_min"
+            android:summary="Set Random Interval Min (in seconds)"
+            android:title="Random Interval Min"
+            android:inputType="number"
+            android:defaultValue="60"
+            />
+        <EditTextPreference
+            android:dialogTitle="Set Random Interval Max (in seconds)"
+            android:key="random_interval_max"
+            android:summary="Set Random Interval Max (in seconds)"
+            android:title="Random Interval Max"
+            android:inputType="number"
+            android:defaultValue="80"/>
+    </PreferenceCategory>
+</PreferenceScreen>

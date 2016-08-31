@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Lighten Artes</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_delete">Delete</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="nav_item_home">\@diaxz</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+    </string-array>
+
+    <string name="title_home">\@diaxz</string>
+</resources>
